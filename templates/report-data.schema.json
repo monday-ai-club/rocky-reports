@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Rocky Report Data",
+  "type": "object",
+  "required": [
+    "title",
+    "requestedBy",
+    "generatedAt",
+    "sources",
+    "executiveSummary",
+    "kpis",
+    "primaryChart",
+    "secondaryChart",
+    "interpretation",
+    "notes",
+    "detailTable"
+  ],
+  "properties": {
+    "title": { "type": "string" },
+    "requestedBy": { "type": "string" },
+    "generatedAt": { "type": "string" },
+    "sources": { "type": "array", "items": { "type": "string" } },
+    "executiveSummary": { "type": "string" },
+    "kpis": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "properties": {
+          "label": { "type": "string" },
+          "value": {},
+          "subtext": { "type": "string" }
+        }
+      }
+    },
+    "primaryChart": {
+      "type": "object",
+      "required": ["title", "subtitle", "items"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "type": { "type": "string", "enum": ["bar", "line", "pie", "doughnut"] },
+        "datasetLabel": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "secondaryChart": {
+      "type": "object",
+      "required": ["title", "subtitle", "items"],
+      "properties": {
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "type": { "type": "string", "enum": ["bar", "line", "pie", "doughnut"] },
+        "datasetLabel": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "value"],
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "interpretation": { "type": "string" },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "detailTable": {
+      "type": "object",
+      "required": ["columns", "rows"],
+      "properties": {
+        "columns": { "type": "array", "items": { "type": "string" } },
+        "rows": { "type": "array", "items": { "type": "array", "items": {} } }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ANZ vs Asia overlay-assisted multi-product wins — Q1 FY26</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="header-card">
+      <div class="eyebrow">APJ Multi-Product • Rocky Report</div>
+      <h1>ANZ vs Asia overlay-assisted multi-product wins — Q1 FY26</h1>
+      <p>ANZ outperformed Asia on overlay-assisted multi-product win volume, while Asia showed higher average ARR per deal.</p>
+      <div class="meta-row">
+        <span>🧑 Requested by: Anza Hashmi</span>
+        <span>🕒 Generated: 2026-05-01 11:42 AEST</span>
+        <span>🗂️ Sources: Salesforce, BigBrain</span>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      <div class='kpi-card'><div class='kpi-label'>ANZ tagged wins</div><div class='kpi-value'>42</div><div class='kpi-sub'>Overlay-assisted opps</div></div><div class='kpi-card'><div class='kpi-label'>Asia tagged wins</div><div class='kpi-value'>19</div><div class='kpi-sub'>Overlay-assisted opps</div></div><div class='kpi-card'><div class='kpi-label'>ANZ ARR</div><div class='kpi-value'>3.8</div><div class='kpi-sub'>$M total ARR</div></div><div class='kpi-card'><div class='kpi-label'>Asia ARR</div><div class='kpi-value'>2.9</div><div class='kpi-sub'>$M total ARR</div></div>
+    </section>
+
+    <section class="grid">
+      <div>
+        <div class="panel">
+          <div class="badge">📊 Primary visual</div>
+          <h2 style="margin-top:14px;">Overlay-assisted wins by region</h2>
+          <p class="muted">Q1 FY26 opportunity count</p>
+          <div id="primary-chart" class="chart-shell"></div>
+        </div>
+
+        <div class="panel">
+          <div class="badge">🔎 Interpretation</div>
+          <h2 style="margin-top:14px;">What this means</h2>
+          <p>ANZ appears stronger on scaled overlay engagement, with more tagged opportunities and broader coverage. Asia looks more concentrated in fewer, larger motions, which likely explains the stronger average ARR per deal despite lower volume.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel">
+          <div class="badge">📈 Supporting visual</div>
+          <h2 style="margin-top:14px;">ARR by product family</h2>
+          <p class="muted">$M across tagged multi-product wins</p>
+          <div id="secondary-chart" class="chart-shell"></div>
+        </div>
+
+        <div class="panel">
+          <div class="badge">⚠️ Notes</div>
+          <h2 style="margin-top:14px;">Method & caveats</h2>
+          <ul class="note-list">
+            <li>Multi-product includes CRM, Service, DEV, and Campaigns only.</li><li>Overlay signal should ideally reflect both overlay field and specialist-request line item.</li><li>Figures shown here are mock/example values for the report template scaffold.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="badge">📋 Supporting detail</div>
+      <h2 style="margin-top:14px;">Breakdown table</h2>
+      <table class='table'><thead><tr><th>Region</th><th>Tagged wins</th><th>ARR ($M)</th><th>Avg ARR / win ($k)</th></tr></thead><tbody><tr><td>ANZ</td><td>42</td><td>3.8</td><td>90.5</td></tr><tr><td>Asia</td><td>19</td><td>2.9</td><td>152.6</td></tr></tbody></table>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/app.js"></script>
+  <script>
+    const REPORT_DATA = {"title": "ANZ vs Asia overlay-assisted multi-product wins \u2014 Q1 FY26", "requestedBy": "Anza Hashmi", "generatedAt": "2026-05-01 11:42 AEST", "sources": ["Salesforce", "BigBrain"], "executiveSummary": "ANZ outperformed Asia on overlay-assisted multi-product win volume, while Asia showed higher average ARR per deal.", "kpis": [{"label": "ANZ tagged wins", "value": 42, "subtext": "Overlay-assisted opps"}, {"label": "Asia tagged wins", "value": 19, "subtext": "Overlay-assisted opps"}, {"label": "ANZ ARR", "value": 3.8, "subtext": "$M total ARR"}, {"label": "Asia ARR", "value": 2.9, "subtext": "$M total ARR"}], "primaryChart": {"title": "Overlay-assisted wins by region", "subtitle": "Q1 FY26 opportunity count", "type": "bar", "datasetLabel": "Tagged wins", "items": [{"label": "ANZ", "value": 42}, {"label": "Asia", "value": 19}]}, "secondaryChart": {"title": "ARR by product family", "subtitle": "$M across tagged multi-product wins", "type": "doughnut", "datasetLabel": "ARR ($M)", "items": [{"label": "CRM", "value": 2.1}, {"label": "Service", "value": 1.9}, {"label": "DEV", "value": 1.4}, {"label": "Campaigns", "value": 1.3}]}, "interpretation": "ANZ appears stronger on scaled overlay engagement, with more tagged opportunities and broader coverage. Asia looks more concentrated in fewer, larger motions, which likely explains the stronger average ARR per deal despite lower volume.", "notes": ["Multi-product includes CRM, Service, DEV, and Campaigns only.", "Overlay signal should ideally reflect both overlay field and specialist-request line item.", "Figures shown here are mock/example values for the report template scaffold."], "detailTable": {"columns": ["Region", "Tagged wins", "ARR ($M)", "Avg ARR / win ($k)"], "rows": [["ANZ", 42, 3.8, 90.5], ["Asia", 19, 2.9, 152.6]]}};
+    RockyReports.renderChart(document.getElementById('primary-chart'), REPORT_DATA.primaryChart || {});
+    RockyReports.renderChart(document.getElementById('secondary-chart'), REPORT_DATA.secondaryChart || {});
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{TITLE}}</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="header-card">
+      <div class="eyebrow">APJ Multi-Product • Rocky Report</div>
+      <h1>{{TITLE}}</h1>
+      <p>{{EXEC_SUMMARY}}</p>
+      <div class="meta-row">
+        <span>🧑 Requested by: {{REQUESTED_BY}}</span>
+        <span>🕒 Generated: {{GENERATED_AT}}</span>
+        <span>🗂️ Sources: {{SOURCES}}</span>
+      </div>
+    </section>
+
+    <section class="kpi-grid">
+      {{KPI_CARDS}}
+    </section>
+
+    <section class="grid">
+      <div>
+        <div class="panel">
+          <div class="badge">📊 Primary visual</div>
+          <h2 style="margin-top:14px;">{{PRIMARY_CHART_TITLE}}</h2>
+          <p class="muted">{{PRIMARY_CHART_SUBTITLE}}</p>
+          <div id="primary-chart" class="chart-shell"></div>
+        </div>
+
+        <div class="panel">
+          <div class="badge">🔎 Interpretation</div>
+          <h2 style="margin-top:14px;">What this means</h2>
+          <p>{{INTERPRETATION}}</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="panel">
+          <div class="badge">📈 Supporting visual</div>
+          <h2 style="margin-top:14px;">{{SECONDARY_CHART_TITLE}}</h2>
+          <p class="muted">{{SECONDARY_CHART_SUBTITLE}}</p>
+          <div id="secondary-chart" class="chart-shell"></div>
+        </div>
+
+        <div class="panel">
+          <div class="badge">⚠️ Notes</div>
+          <h2 style="margin-top:14px;">Method & caveats</h2>
+          <ul class="note-list">
+            {{NOTES_LIST}}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="badge">📋 Supporting detail</div>
+      <h2 style="margin-top:14px;">Breakdown table</h2>
+      {{DETAIL_TABLE}}
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../assets/app.js"></script>
+  <script>
+    const REPORT_DATA = {{REPORT_DATA_JSON}};
+    RockyReports.renderChart(document.getElementById('primary-chart'), REPORT_DATA.primaryChart || {});
+    RockyReports.renderChart(document.getElementById('secondary-chart'), REPORT_DATA.secondaryChart || {});
+  </script>
+</body>
+</html>

@@ -1,2 +1,3 @@
-# rocky-reports
-Published visual reports for Rocky APJ Multi-Product analysis
+# Rocky Reports
+
+Published visual reports for APJ Multi-Product analysis.
