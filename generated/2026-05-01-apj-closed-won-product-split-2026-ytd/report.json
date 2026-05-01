@@ -1,0 +1,207 @@
+{
+  "title": "APJ Closed Won product split \u2014 2026 YTD",
+  "requestedBy": "Anza",
+  "generatedAt": "2026-05-01 00:00 UTC",
+  "sources": [
+    "Salesforce",
+    "BigBrain"
+  ],
+  "executiveSummary": "APJ Closed Won volume in 2026 YTD is concentrated in Core and CRM, with a meaningful long tail across newer and add-on products.",
+  "kpis": [
+    {
+      "label": "Total won opps",
+      "value": "3,875",
+      "subtext": "APJ opportunity-level total"
+    },
+    {
+      "label": "Core-tagged wins",
+      "value": "3,249",
+      "subtext": "Product-split count"
+    },
+    {
+      "label": "CRM-tagged wins",
+      "value": "882",
+      "subtext": "Product-split count"
+    },
+    {
+      "label": "Service-tagged wins",
+      "value": "165",
+      "subtext": "Product-split count"
+    }
+  ],
+  "primaryChart": {
+    "title": "Closed Won opportunities by product",
+    "subtitle": "APJ, 2026 YTD through 2026-05-01",
+    "type": "bar",
+    "datasetLabel": "Won opps",
+    "items": [
+      {
+        "label": "Core",
+        "value": 3249
+      },
+      {
+        "label": "CRM",
+        "value": 882
+      },
+      {
+        "label": "monday Vibe",
+        "value": 352
+      },
+      {
+        "label": "AI Credits",
+        "value": 213
+      },
+      {
+        "label": "Service",
+        "value": 165
+      },
+      {
+        "label": "Marketing",
+        "value": 89
+      },
+      {
+        "label": "Note Taker Add-on",
+        "value": 83
+      },
+      {
+        "label": "Software",
+        "value": 71
+      },
+      {
+        "label": "Canvas",
+        "value": 19
+      },
+      {
+        "label": "Premium Support",
+        "value": 13
+      },
+      {
+        "label": "AI Sidekick",
+        "value": 11
+      },
+      {
+        "label": "Guardian",
+        "value": 9
+      },
+      {
+        "label": "Automations Package",
+        "value": 3
+      },
+      {
+        "label": "Managed Services",
+        "value": 1
+      },
+      {
+        "label": "Workflow Builder Add-on",
+        "value": 1
+      }
+    ]
+  },
+  "secondaryChart": {
+    "title": "Top product mix share",
+    "subtitle": "Top 6 product categories by won opp count",
+    "type": "doughnut",
+    "datasetLabel": "Won opps",
+    "items": [
+      {
+        "label": "Core",
+        "value": 3249
+      },
+      {
+        "label": "CRM",
+        "value": 882
+      },
+      {
+        "label": "monday Vibe",
+        "value": 352
+      },
+      {
+        "label": "AI Credits",
+        "value": 213
+      },
+      {
+        "label": "Service",
+        "value": 165
+      },
+      {
+        "label": "Marketing",
+        "value": 89
+      }
+    ]
+  },
+  "interpretation": "Core dominates the won-opportunity mix, with CRM clearly the strongest non-core product. Service and Marketing are present but much smaller, while the rest of the portfolio is a long tail. Because the data is at opportunity-product grain, multi-product deals can show up in more than one category.",
+  "notes": [
+    "Scope: APJ Closed Won opportunities in 2026 YTD through 2026-05-01.",
+    "Counts are product-split counts, not mutually exclusive opportunity totals.",
+    "A single won opportunity can appear in multiple product categories.",
+    "Product-level ARR fields returned as zero in the accessible dataset for this slice, so the visual is count-based rather than ARR-based."
+  ],
+  "detailTable": {
+    "columns": [
+      "Product",
+      "Won opp count"
+    ],
+    "rows": [
+      [
+        "Core",
+        3249
+      ],
+      [
+        "CRM",
+        882
+      ],
+      [
+        "monday Vibe",
+        352
+      ],
+      [
+        "AI Credits",
+        213
+      ],
+      [
+        "Service",
+        165
+      ],
+      [
+        "Marketing",
+        89
+      ],
+      [
+        "Note Taker Add-on",
+        83
+      ],
+      [
+        "Software",
+        71
+      ],
+      [
+        "Canvas",
+        19
+      ],
+      [
+        "Premium Support",
+        13
+      ],
+      [
+        "AI Sidekick",
+        11
+      ],
+      [
+        "Guardian",
+        9
+      ],
+      [
+        "Automations Package",
+        3
+      ],
+      [
+        "Managed Services",
+        1
+      ],
+      [
+        "Workflow Builder Add-on",
+        1
+      ]
+    ]
+  }
+}
